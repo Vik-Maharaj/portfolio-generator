@@ -4,21 +4,15 @@ console.log(profileDataArgs);
 
 
 const printProfileData = profileDataArr => {
-    for (let i = 0; i < profileDataArr.length; i++) {
-        console.log(profileDataArr[i]);
-    }
-    
+  // This...
+  for (let i = 0; i < profileDataArr.length; i += 1) {
+    console.log(profileDataArr[i]);
+  }
+
+  console.log('================');
+
+  // Is the same as this...
+  profileDataArr.forEach(profileItem => console.log(profileItem));
 };
 
 printProfileData(profileDataArgs);
-
-
-
-let two = 'two: declared outside the block';
-
-if (true === true) {
-  let two = 'two: declared inside the block';
-  console.log(two); // prints 'two: declared inside the block'
-}
-
-console.log(two); 
